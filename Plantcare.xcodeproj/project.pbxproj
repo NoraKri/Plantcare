@@ -13,6 +13,10 @@
 		B39DC9312876FDB70059376F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39DC9302876FDB70059376F /* Preview Assets.xcassets */; };
 		B39DC9332876FDB70059376F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC9322876FDB70059376F /* Persistence.swift */; };
 		B39DC9362876FDB70059376F /* Plantcare.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B39DC9342876FDB70059376F /* Plantcare.xcdatamodeld */; };
+		B39DC93E287737F70059376F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC93D287737F70059376F /* Theme.swift */; };
+		B39DC9402877395B0059376F /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC93F2877395A0059376F /* Plant.swift */; };
+		B39DC94328773C250059376F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC94228773C250059376F /* CardView.swift */; };
+		B39DC945287748150059376F /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC944287748140059376F /* PlantsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,10 @@
 		B39DC9302876FDB70059376F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B39DC9322876FDB70059376F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B39DC9352876FDB70059376F /* Plantcare.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Plantcare.xcdatamodel; sourceTree = "<group>"; };
+		B39DC93D287737F70059376F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B39DC93F2877395A0059376F /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		B39DC94228773C250059376F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B39DC944287748140059376F /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +63,9 @@
 		B39DC9282876FDB00059376F /* Plantcare */ = {
 			isa = PBXGroup;
 			children = (
+				B39DC94128773C130059376F /* Views */,
+				B39DC93C287737DD0059376F /* Models */,
 				B39DC9292876FDB00059376F /* PlantcareApp.swift */,
-				B39DC92B2876FDB00059376F /* ContentView.swift */,
 				B39DC92D2876FDB70059376F /* Assets.xcassets */,
 				B39DC9322876FDB70059376F /* Persistence.swift */,
 				B39DC9342876FDB70059376F /* Plantcare.xcdatamodeld */,
@@ -71,6 +80,25 @@
 				B39DC9302876FDB70059376F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B39DC93C287737DD0059376F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B39DC93D287737F70059376F /* Theme.swift */,
+				B39DC93F2877395A0059376F /* Plant.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B39DC94128773C130059376F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B39DC92B2876FDB00059376F /* ContentView.swift */,
+				B39DC94228773C250059376F /* CardView.swift */,
+				B39DC944287748140059376F /* PlantsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39DC945287748150059376F /* PlantsView.swift in Sources */,
+				B39DC94328773C250059376F /* CardView.swift in Sources */,
 				B39DC9362876FDB70059376F /* Plantcare.xcdatamodeld in Sources */,
+				B39DC9402877395B0059376F /* Plant.swift in Sources */,
 				B39DC9332876FDB70059376F /* Persistence.swift in Sources */,
+				B39DC93E287737F70059376F /* Theme.swift in Sources */,
 				B39DC92C2876FDB00059376F /* ContentView.swift in Sources */,
 				B39DC92A2876FDB00059376F /* PlantcareApp.swift in Sources */,
 			);
