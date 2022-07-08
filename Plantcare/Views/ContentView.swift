@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    let plant: Plant
+    
     var body: some View {
         VStack(alignment: .leading){
             Rectangle()
                 .fill(.green)
                 .frame(height: 150)
             VStack(alignment: .leading) {
-                Text("Monstera Deliciosa")
+                Text(plant.name)
                     .font(.title)
-                Text("Placed in office")
+                Text("Placed in \(plant.room)")
                     .foregroundColor(.secondary)
             }
             .padding()
@@ -90,6 +92,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(plant: Plant.sampleData[0])
     }
 }

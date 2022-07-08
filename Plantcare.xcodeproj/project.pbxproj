@@ -17,6 +17,11 @@
 		B39DC9402877395B0059376F /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC93F2877395A0059376F /* Plant.swift */; };
 		B39DC94328773C250059376F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC94228773C250059376F /* CardView.swift */; };
 		B39DC945287748150059376F /* PlantsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39DC944287748140059376F /* PlantsView.swift */; };
+		B3BBC4A9287868B000787930 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC4A8287868B000787930 /* DetailView.swift */; };
+		B3BBC4AF287894B900787930 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC4AE287894B900787930 /* FrameView.swift */; };
+		B3BBC4B1287897FD00787930 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC4B0287897FD00787930 /* CameraView.swift */; };
+		B3BBC4B42878988000787930 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC4B32878988000787930 /* CameraManager.swift */; };
+		B3BBC4B628789E7100787930 /* CameraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BBC4B528789E7100787930 /* CameraError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		B39DC93F2877395A0059376F /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
 		B39DC94228773C250059376F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B39DC944287748140059376F /* PlantsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsView.swift; sourceTree = "<group>"; };
+		B3BBC4A8287868B000787930 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		B3BBC4AE287894B900787930 /* FrameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		B3BBC4B0287897FD00787930 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		B3BBC4B32878988000787930 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		B3BBC4B528789E7100787930 /* CameraError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,7 @@
 		B39DC9282876FDB00059376F /* Plantcare */ = {
 			isa = PBXGroup;
 			children = (
+				B3BBC4B22878987000787930 /* Camera */,
 				B39DC94128773C130059376F /* Views */,
 				B39DC93C287737DD0059376F /* Models */,
 				B39DC9292876FDB00059376F /* PlantcareApp.swift */,
@@ -97,8 +108,20 @@
 				B39DC92B2876FDB00059376F /* ContentView.swift */,
 				B39DC94228773C250059376F /* CardView.swift */,
 				B39DC944287748140059376F /* PlantsView.swift */,
+				B3BBC4A8287868B000787930 /* DetailView.swift */,
+				B3BBC4AE287894B900787930 /* FrameView.swift */,
+				B3BBC4B0287897FD00787930 /* CameraView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B3BBC4B22878987000787930 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				B3BBC4B32878988000787930 /* CameraManager.swift */,
+				B3BBC4B528789E7100787930 /* CameraError.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,12 +195,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39DC945287748150059376F /* PlantsView.swift in Sources */,
+				B3BBC4A9287868B000787930 /* DetailView.swift in Sources */,
 				B39DC94328773C250059376F /* CardView.swift in Sources */,
 				B39DC9362876FDB70059376F /* Plantcare.xcdatamodeld in Sources */,
 				B39DC9402877395B0059376F /* Plant.swift in Sources */,
 				B39DC9332876FDB70059376F /* Persistence.swift in Sources */,
+				B3BBC4B628789E7100787930 /* CameraError.swift in Sources */,
 				B39DC93E287737F70059376F /* Theme.swift in Sources */,
+				B3BBC4B1287897FD00787930 /* CameraView.swift in Sources */,
 				B39DC92C2876FDB00059376F /* ContentView.swift in Sources */,
+				B3BBC4AF287894B900787930 /* FrameView.swift in Sources */,
+				B3BBC4B42878988000787930 /* CameraManager.swift in Sources */,
 				B39DC92A2876FDB00059376F /* PlantcareApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Plantcare/Preview Content\"";
+				DEVELOPMENT_TEAM = K4SPG2PJ4T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -335,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Plantcare/Preview Content\"";
+				DEVELOPMENT_TEAM = K4SPG2PJ4T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
