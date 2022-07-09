@@ -14,7 +14,8 @@ struct PlantcareApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                PlantsView(plant: Plant.sampleData)
+                //PlantsView(plant: Plant.sampleData)
+                ImageMenuView()
             }
         }
     }

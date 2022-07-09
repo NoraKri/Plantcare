@@ -7,16 +7,20 @@
 
 import Foundation
 
+class handler: ObservableObject{
+    @Published var room = [String]()
+}
+
 struct Plant: Identifiable {
     let id: UUID
     var name: String
-    var room: String
+    var room: [String]
     var hasPest: Bool
-    var lastWatered: Int
-    var lastTreated: Int
-    var lastFertilized: Int
+    var lastWatered: Date
+    var lastTreated: Date
+    var lastFertilized: Date
     
-    init(id: UUID = UUID(), name: String, room: String, hasPest: Bool, lastWatered: Int, lastTreated: Int, lastFertilized: Int){
+    init(id: UUID = UUID(), name: String, room: [String], hasPest: Bool, lastWatered: Date, lastTreated: Date, lastFertilized: Date){
         self.id = id
         self.name = name
         self.room = room
@@ -28,10 +32,27 @@ struct Plant: Identifiable {
 }
 
 extension Plant {
+    struct Data {
+        var name: String = ""
+        var room: [String] = ["Living room", "Kitchen", "Entryway", "Bedroom", "Bathroom"]
+        var hasPest: Bool = false
+        var lastWatered: Date = Date.now
+        var lastTreated: Date = Date.now
+        var lastFertilized: Date = Date.now
+    }
+    
+    var data: Data {
+        Data(name: name, room: room, hasPest: hasPest, lastWatered: lastWatered, lastTreated: lastTreated, lastFertilized: lastFertilized)
+    }
+}
+
+extension Plant {
     static let sampleData: [Plant] =
     [
-        Plant(name: "Monstera Deliciosa", room: "Kontor", hasPest: false, lastWatered: 4, lastTreated: 0, lastFertilized: 21),
-        Plant(name: "Monstera Adansonii", room: "Kontor", hasPest: true, lastWatered: 1, lastTreated: 1, lastFertilized: 7),
-        Plant(name: "Stromanthe Burle Maxii", room: "Soverom", hasPest: true, lastWatered: 4, lastTreated: 3, lastFertilized: 21)
+        Plant(name: "Monstera Deliciosa", room: ["Living room"], hasPest: false, lastWatered: Date.now, lastTreated: Date.now, lastFertilized: Date.now),
+        Plant(name: "Monstera Adansonii", room: ["Office"], hasPest: true, lastWatered: Date.now, lastTreated: Date.now, lastFertilized: Date.now),
+        Plant(name: "Stromanthe Burle Maxii", room: ["Bedroom"], hasPest: true, lastWatered: Date.now, lastTreated: Date.now, lastFertilized: Date.now)
     ]
+    
+    
 }

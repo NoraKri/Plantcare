@@ -18,7 +18,7 @@ struct ContentView: View {
             VStack(alignment: .leading) {
                 Text(plant.name)
                     .font(.title)
-                Text("Placed in \(plant.room)")
+                //Text("Placed in \(plant.room)")
                     .foregroundColor(.secondary)
             }
             .padding()
